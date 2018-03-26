@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <title>The University Of Hong Kong</title>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="header">
+      <div class="row">
+        <div class="col-sm-12 col-md-4"><img id="logo" src="./images/logo.jpeg"></div>
+        <div class="col-sm-6 col-md-4 text-center"><img id="sub-logo" src="./images/liver.jpeg"></div>
+        <div class="col-sm-6 col-md-4 middle">
+          <div class="row">
+            <div class="col text-right"><i class="fas fa-home"></i></div>
+          </div>
+          <div class="row">
+            <div class="col text-right">Welcome, Dr. Cheung</div>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4 class="app-title">Liver Cancer Predictive Staging System</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <form class="form-inline" id="search-form">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="Patient" placeholder="Patient ID">
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+          </form>
+          <hr>
+        </div>
+      </div>
+      <div class="row" id="patient-data">
+        <div class="col">
+          <h4 class="app-sub-title text-muted">General Information</h4>
+          
+          <form id="app-form">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="text" class="form-control" id="age" placeholder="Enter age" name="age" value="46">
+            </div>
+
+            <div class="form-group">
+              <label>Sex</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="male" name="sex" class="custom-control-input" value="1" checked="">
+                <label class="custom-control-label" for="male">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="female" name="sex" class="custom-control-input" value="2">
+                <label class="custom-control-label" for="female">Female</label>
+              </div>              
+            </div>
+
+            <div class="form-group">
+              <label for="bh">Body height (cm)</label>
+              <input type="text" class="form-control" id="bh" name="bh" placeholder="Enter height (cm)" value="158">
+            </div>
+
+            <div class="form-group">
+              <label for="bwbft">Body weight before first treatment (kg)</label>
+              <input type="text" class="form-control" id="bwbft" name="bwbft" placeholder="Enter weight (kg)" value="67">
+            </div>            
+
+            <div class="form-group">
+              <label>General condition</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="good" name="gc" class="custom-control-input" value="1">
+                <label class="custom-control-label" for="good">Good</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="fair" name="gc" class="custom-control-input" value="2" checked>
+                <label class="custom-control-label" for="fair">Fair</label>
+              </div>              
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="poor" name="gc" class="custom-control-input" value="3">
+                <label class="custom-control-label" for="poor">Poor</label>
+              </div>              
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="terminal" name="gc" class="custom-control-input" value="4">
+                <label class="custom-control-label" for="terminal">Terminal</label>
+              </div>              
+            </div>
+
+            <h4 class="app-sub-title text-muted">Characteristics</h4>
+
+            <div class="form-group">
+              <label>ECOG PS</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="0" name="gstatus2" class="custom-control-input" value="0">
+                <label class="custom-control-label" for="0">0</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="1" name="gstatus2" class="custom-control-input" value="1" checked>
+                <label class="custom-control-label" for="1">1</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="2" name="gstatus2" class="custom-control-input" value="2">
+                <label class="custom-control-label" for="2">2</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="3" name="gstatus2" class="custom-control-input" value="3">
+                <label class="custom-control-label" for="3">3</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="4" name="gstatus2" class="custom-control-input" value="4">
+                <label class="custom-control-label" for="4">4</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Hep B surface antigen</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="hbsag1" name="hbsag" class="custom-control-input" value="1" checked>
+                <label class="custom-control-label" for="hbsag1">Negative</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="hbsag2" name="hbsag" class="custom-control-input" value="2">
+                <label class="custom-control-label" for="hbsag2">Positive</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Hep C anitbody</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="hcvab1" name="hcvab" class="custom-control-input" value="1">
+                <label class="custom-control-label" for="hcvab1">Negative</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="hcvab2" name="hcvab" class="custom-control-input" value="2" checked>
+                <label class="custom-control-label" for="hcvab2">Positive</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="score">Child-Pugh score</label>
+              <select id="score" class="custom-select" name="score">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Child-Pugh grade</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="grade1" name="grade" class="custom-control-input" value="1">
+                <label class="custom-control-label" for="grade1">A (score 5-6)</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="grade2" name="grade" class="custom-control-input" value="2" checked>
+                <label class="custom-control-label" for="grade2">B (score 7-9)</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="grade3" name="grade" class="custom-control-input" value="3">
+                <label class="custom-control-label" for="grade3">C (score 10-15)</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tbili">Total bilirubin</label>
+              <input type="text" class="form-control" id="tbili" placeholder="Enter total bilirubin" name="tbili" value="12">
+            </div>
+
+            <div class="form-group">
+              <label for="albu">Albumin</label>
+              <input type="text" class="form-control" id="albu" placeholder="Enter albumin" name="albu" value="Noraml">
+            </div>
+
+            <div class="form-group">
+              <label for="alkp">Alkaline phosphatase</label>
+              <input type="text" class="form-control" id="alkp" placeholder="Enter alkaline phosphatase" name="alkp" value="Alkp">
+            </div>
+
+            <div class="form-group">
+              <label for="sgot">Aspartate transaminase</label>
+              <input type="text" class="form-control" id="sgot" placeholder="Enter aspartate transaminase" name="sgot" value="sgot">
+            </div>
+
+            <div class="form-group">
+              <label for="sgpt">Alanine transaminase</label>
+              <input type="text" class="form-control" id="sgpt" placeholder="Enter alanine transaminase" name="sgpt" value="sgpt">
+            </div>
+
+            <div class="form-group">
+              <label for="inr">International normalized ratio</label>
+              <input type="text" class="form-control" id="inr" placeholder="Enter international normalized ratio" name="inr" value="0.7">
+            </div>
+
+            <div class="form-group">
+              <label for="plate">Platelet count</label>
+              <input type="text" class="form-control" id="plate" placeholder="Enter platelet count" name="plate" value="1200">
+            </div>
+
+            <div class="form-group">
+              <label for="afp">Alpha fetoprotein</label>
+              <input type="text" class="form-control" id="afp" placeholder="Enter alpha fetoprotein" name="afp" value="afp">
+            </div>
+
+            <div class="form-group">
+              <label for="tlv">Total liver volume (ml)</label>
+              <input type="text" class="form-control" id="tlv" placeholder="Enter total liver volume (ml)" name="tlv" value="12">
+            </div>
+
+            <div class="form-group">
+              <label for="lrv">Liver remnant volume (ml)</label>
+              <input type="text" class="form-control" id="lrv" placeholder="Enter liver remnant volume (ml)" name="lrv" value="34">
+            </div>
+
+            <div class="form-group">
+              <label for="icg15">ICG% (15 min)</label>
+              <input type="text" class="form-control" id="icg15" placeholder="Enter ICG% (15 min)" name="icg15" value="12">
+            </div>
+
+            <div class="form-group">
+              <label>Presence of Complication</label><br>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="yes" name="binary" class="custom-control-input" value="1">
+                <label class="custom-control-label" for="yes">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="no" name="binary" class="custom-control-input" value="2">
+                <label class="custom-control-label" for="no">No</label>
+              </div>              
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary">Save</button>            
+            <button type="submit" class="btn btn-outline-info">Predict</button>
+
+          </form>            
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+
+        $('#search-form').submit(function(e) {
+          e.preventDefault();
+          $('#patient-data').show();
+        });
+
+        $('#app-form').submit(function (e) {
+            e.preventDefault();
+            var data = $(this).serializeArray();
+
+            var jqxhr = $.ajax({
+              method: "POST",
+              url: "your URL to api",
+              data: data
+            }).done(function(e) {
+                console.log( "success" );
+
+                // redirect to another page
+                location.href = 'submit.html';
+              })
+              .fail(function(e) {
+                console.log( "error: " + e);
+              })
+              .always(function() {
+                console.log( "complete" );
+
+                // redirect to another page
+                location.href = 'submit.html';
+              });
+        });
+      })();
+
+    </script>
+
+  </body>
+</html>

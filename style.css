@@ -1,0 +1,28 @@
+body #patient-data {
+  display: none; }
+body .app-title {
+  font-weight: 600;
+  color: #9B2980;
+  padding: 15px 0px; }
+body .app-sub-title {
+  font-weight: 400;
+  padding: 8px 0px;
+  border-bottom: 1px solid #eee; }
+body #header {
+  border-bottom: 2px solid #9B2980; }
+  body #header .middle {
+    padding: 16px 0px;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    flex-direction: column; }
+    body #header .middle .row {
+      width: 100%; }
+  body #header #logo {
+    height: 80px;
+    padding: 10px 0px; }
+  body #header #sub-logo {
+    height: 80px;
+    padding: 10px 0px; }
+
+/*# sourceMappingURL=style.css.map */

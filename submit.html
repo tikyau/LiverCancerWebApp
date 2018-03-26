@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <title>The University Of Hong Kong</title>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="header">
+      <div class="row">
+        <div class="col-sm-12 col-md-4"><img id="logo" src="./images/logo.jpeg"></div>
+        <div class="col-sm-6 col-md-4 text-center"><img id="sub-logo" src="./images/liver.jpeg"></div>
+        <div class="col-sm-6 col-md-4 middle">
+          <div class="row">
+            <div class="col text-right"><i class="fas fa-home"></i></div>
+          </div>
+          <div class="row">
+            <div class="col text-right">Welcome, Dr. Cheung</div>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background-color: #ffffff;">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Predicted results</li>
+            </ol>
+          </nav>          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4 class="app-title">Liver Cancer Predictive Staging System</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h4 class="app-sub-title text-muted">Predicted Result</h4>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Predicted Stage</th>
+                <th scope="col">Confident Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Stage 3</td>
+                <td>86%</td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h4 class="app-sub-title text-muted">Suggestions</h4>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Priority</th>
+                <th scope="col">Treatment</th>
+                <th scope="col">Length of follow up (months)</th>
+                <th scope="col">Survival Indicator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Systemic Therapy</td>
+                <td>135.6</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Resection</td>
+                <td>67.2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Ablation</td>
+                <td>57.3</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h4 class="app-sub-title text-muted">Final Decision</h4>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Cancer Stage</th>
+                <th scope="col">Treatment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                      <option selected>Stage 1</option>
+                      <option>Stage 2</option>
+                      <option>Stage 3</option>
+                      <option>Stage 4</option>
+                      <option>Stage 5a</option>
+                      <option>Stage 5b</option>
+                    </select>
+                  </div>                  
+                </td>
+                <td>
+                  <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                      <option selected>Resection</option>
+                      <option>Ablation</option>
+                      <option>Liver Transplant</option>
+                      <option>Supportive Care</option>
+                      <option>TACE</option>
+                      <option>Systemic Therapy</option>
+                    </select>
+                  </div>                      
+                </td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </div>
+
+        
+
+  </body>
+</html>
